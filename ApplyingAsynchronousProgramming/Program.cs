@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ApplyingAsynchronousProgramming
 {
@@ -6,8 +7,13 @@ namespace ApplyingAsynchronousProgramming
     {
         static void Main(string[] args)
         {
-            ContinuationThreads.RunExample();
-            
+            ThreadPool.GetMaxThreads(out int maxWorkerThreads, out int maxCompletionPortThreads);
+            Console.WriteLine($"MaxWorkerThreads: {maxWorkerThreads}");
+
+            //AsyncAwaitContinuationThreads.RunExample();
+            //UsingTaskRunWithAsyncAwait.RunExample();
+            UsingTaskRunAndContinueWith.RunExample();
+
             Console.ReadLine();
         }
     }
