@@ -30,7 +30,7 @@ namespace ApplyingAsynchronousProgramming
             DebugHelper.WriteCurrentThread();
             DebugHelper.WriteWorkerThreadsAvailable();
 
-            await Task.Delay(3000);
+            await Task.Delay(3000).ConfigureAwait(true);
 
             //continuation code
             Console.WriteLine("\n FryEggs end");
@@ -44,7 +44,7 @@ namespace ApplyingAsynchronousProgramming
             DebugHelper.WriteCurrentThread();
             DebugHelper.WriteWorkerThreadsAvailable();
 
-            await Task.Delay(2000);
+            await Task.Delay(2000).ConfigureAwait(true);
 
             //continuation code
             Console.WriteLine("\n FryBacon end");
