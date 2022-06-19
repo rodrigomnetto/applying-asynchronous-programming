@@ -12,7 +12,7 @@ namespace ApplyingAsynchronousProgramming
 
             //AsyncAwaitContinuationThreads.RunExample();
             //UsingTaskRunWithAsyncAwait.RunExample();
-            UsingTaskCompletionSource.RunExample();
+            WorkingWithAttachedTasks.RunExample();
 
             Console.ReadLine();
         }
